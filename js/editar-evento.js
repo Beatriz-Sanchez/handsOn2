@@ -26,7 +26,6 @@ form.onsubmit = async (e) => {
     formParaObj(form,eventoEditado);
     editarOuExcluir(id,"editar",eventoEditado)
    
-    window.location.replace("admin.html")
   } catch (error) {
     console.log(error);
   }

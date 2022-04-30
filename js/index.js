@@ -37,6 +37,7 @@ const formParaObj = (form, obj) => {
       obj[input.name] = input.value;
     }
   }
+  console.log(obj);
 }
 //usado em editar e excluir
 const objParaForm = (obj, form) => {
@@ -131,7 +132,7 @@ const editarOuExcluir = async (id, acao, eventoEditado = {}) => {
 
     if (acao == "editar") {
       options.method = "PUT",
-        options.body = JSON.stringify(eventoEditado)
+      options.body = JSON.stringify(eventoEditado)
     } else {
       options.method = "DELETE"
     }
@@ -140,11 +141,11 @@ const editarOuExcluir = async (id, acao, eventoEditado = {}) => {
     await fetch(`${BASE_URL}/events/` + id, options);
 
     alert(`seu evento foi ${acao.slice(0,-1)}do com sucesso!`);
-    window.location.replace("admin.html")
+    //window.location.replace("admin.html")
   } catch (error) {
     alert(`erro ao ${acao}:\n ${error}`);
     console.log(error)
-    window.location.replace("admin.html")
+    //window.location.replace("admin.html")
   }
 }
 
