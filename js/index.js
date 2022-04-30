@@ -145,7 +145,7 @@ const editarOuExcluir = async (id, acao, eventoEditado = {}) => {
   } catch (error) {
     alert(`erro ao ${acao}:\n ${error}`);
     console.log(error)
-    //window.location.replace("admin.html")
+    window.location.replace("admin.html")
   }
 }
 
