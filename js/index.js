@@ -141,7 +141,7 @@ const editarOuExcluir = async (id, acao, eventoEditado = {}) => {
     await fetch(`${BASE_URL}/events/` + id, options);
 
     alert(`seu evento foi ${acao.slice(0,-1)}do com sucesso!`);
-    //window.location.replace("admin.html")
+    window.location.replace("admin.html")
   } catch (error) {
     alert(`erro ao ${acao}:\n ${error}`);
     console.log(error)

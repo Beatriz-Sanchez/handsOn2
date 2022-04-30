@@ -20,7 +20,6 @@ window.addEventListener('load', async () => {
 form.onsubmit = async (e) => {
   e.preventDefault();
   try {
-    //!tentar usar return
     const eventoEditado = {};
 
     formParaObj(form,eventoEditado);
